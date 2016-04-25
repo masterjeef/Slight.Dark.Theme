@@ -203,7 +203,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.config("base", (grunt.option("target") == "dev") ? "../ghost/content/themes/Slight" : "../Slight");
+    grunt.config("base", (grunt.option("target") == "dev") ? "../ghost/content/themes/Slight.Dark" : "../Slight.Dark");
 
     grunt.registerTask("default", ["concurrent"]);
     grunt.registerTask("task.less", ["less", "concat", "includereplace:less", "autoprefixer", "cssmin"]);
