@@ -10,11 +10,27 @@
 }
 
 
-@default_font: 'Open Sans', Arial, Helvetica, sans-serif;
-@header_font: 'Open Sans', Arial, Helvetica, sans-serif;
+@default-font: 'Open Sans', Arial, Helvetica, sans-serif;
+@header-font: 'Open Sans', Arial, Helvetica, sans-serif;
 
 @golden: 1.615;
 
+/**
+// Color vars
+**/
+
+@primary-color: #707070;
+@primary-dark: darken(@primary-color, 20%);
+@primary-light: lighten(@primary-color, 20%);
+
+@secondary-color: #707070;
+@secondary-dark:darken(@secondary-color, 20%);
+@secondary-light:lighten(@secondary-color, 20%);
+
+@background-color: #fff;
+@border-color: #eee;
+
+@pace-color: #7f7f7f;
 
 @text: #444;
 @header: #2f2f2f;
@@ -22,6 +38,10 @@
 @link: #707070;
 @link-visited: #707070;
 @link-hover: #222;
+
+/**
+// Social
+**/
 
 .twit-logo {
     background-position-x: 30%;
@@ -61,7 +81,7 @@
 
 body {
     margin: 0;
-    font-family: @default_font;
+    font-family: @default-font;
     line-height: @golden;
     color: @text;
     font-weight: 400;
@@ -147,7 +167,7 @@ a {
 ///////////////////////////////////
 
 .pace .pace-progress {
-    background: #7f7f7f;
+    background: @pace-color;
     position: fixed;
     z-index: 2000;
     top: 0;
@@ -208,7 +228,7 @@ a {
     line-height: 35px;
     cursor: pointer;
     text-align: center;
-    border: 1px solid #eee;
+    border: 1px solid @border-color;
     background-image: data-uri('image/svg+xml', './inlined/edit-icon.svg');
     background-position: center;
     background-repeat: no-repeat;
